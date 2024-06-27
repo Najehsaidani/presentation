@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Stage Iniatation</title>
+    
+</head>
+<body>
+    <header>
+        <span>Stage Iniatation</span>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gymify/index.html">Gymify</a></li>
+                <li><a href="../activité/index.html">Activités </a></li>
+                <li><a href="../infraction/index.html">Infrastructure</a></li>
+                <li><a href="../conclusion/index.html">Conclusion</a></li>
+            </ul>
+        </nav>
+        <script>
+            let menu = document.querySelector("#menu-icon");
+            let sidebar = document.querySelector(".sidebar");
+            
+            // Function to toggle sidebar and menu icon
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                sidebar.classList.toggle('active');
+            };
+        
+            // Remove sidebar when clicking a link within it
+            let sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    menu.classList.remove('bx-x');
+                });
+            });
+        </script>
+        
+    </header>
+    <section id="activite">
+        <h1>Les activités du stage</h1>
+        <div class="act">
+            <h3>1-Creation de portfolio :</h3>
+            <p>Ma première activité consistait à développer une application web pour mon portfolio en utilisant HTML5, CSS3 et JavaScript. </p>
+            <img id="img1" src="rrrt.png" alt="Portfolio creation"/>
+            <a href="../../portflio/structure/home.html"><h4>OPEN CODE</h4></a>
+        </div>
+        <div class="act">
+            <h3>2-Deuxième activité :</h3>
+            <div class="p">
+                <p>Cette illustration illustre le schéma des cas d'utilisation, dépeignant le fonctionnement opérationnel de l'application Gymify.</p>
+                <p>Elle inclut les acteurs tels que le Visiteur, l'Utilisateur et l'Admin,et permet de détailler les échanges entre les acteurs et le système</p>
+                
+            </div>
+            
+            <img id="img2" src="Grocery cart system   h.jpg" alt="">
+        </div>
+        <div class="act">
+            <h3>3-Troisième activité :</h3>
+            <div class="p">
+                <p>Le diagramme de classes candidates représente la première structure statique du système d'information. </p>
+                <p>Il s'agit d'une version préliminaire du diagramme de classes qui met l'accent sur les classes et leurs relations, </p>
+                <p>sans nécessairement fournir de détails sur les attributs et les opérations.</p>
+            </div>
+            
+            <img id="img3" src="pp.jpg" alt="">
+        </div>
+        <div class="act">
+            <h3>4-Quatrième activité :</h3>
+            <div class="p">
+                <p>Lorsque les coordonnées du destinataire sont entrées, cette vérification finale est réalisée de manière asynchrone.</p>
+                <p> En saisissant le nombre de jetons à transférer au portefeuille du destinataire, une vérification du nombre de jetons dans le portefeuille est effectuée,</p>
+                <p> et si la vérification est réussie, le transfert est accompli avec succès. </p>
+            </div>
+            
+            <img id="img4" src="mm.jpg" alt="">
+        </div>
+    </section>
+    <section id=""></section>
+    <section id=""></section>
+
+</body>
+</html>

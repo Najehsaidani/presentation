@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Stage Iniatation</title>
+    
+</head>
+<body>
+    <header>
+        <span>Stage Iniatation</span>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#Gymify">Gymify</a></li>
+                <li><a href="../activité/index.html">Activités </a></li>
+                <li><a href="../infraction/index.html">Infrastructure</a></li>
+                <li><a href="../conclusion/index.html">Conclusion</a></li>
+            </ul>
+        </nav>
+        <script>
+            let menu = document.querySelector("#menu-icon");
+            let sidebar = document.querySelector(".sidebar");
+            
+            // Function to toggle sidebar and menu icon
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                sidebar.classList.toggle('active');
+            };
+        
+            // Remove sidebar when clicking a link within it
+            let sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    menu.classList.remove('bx-x');
+                });
+            });
+        </script>
+        
+    </header>
+    
+    <section id="Gymify">
+        <div id="presentation">
+            <h1><span id="anim">GYMIFY</span></h1>
+            <img src="gg.jpg" alt="">
+            <p>Gymify, une entreprise de développement de systèmes informatique et de solutions informatiques dédiée au monde du fitness. Elles sont spécialisées dans la création d’applications mobiles, de sites web et d’autres solutions numériques pour les entreprises de fitness et les amateurs de sport. </p>
+        </div>
+        <div class="presentation">
+            <h2>Présentation de <span id="anim">GYMIFY</span></h2>
+            <img src="Capture d'écran 2024-02-26 164125.png" alt="">
+        </div>
+        <div class="presentation">
+            <h2>Organigramme de <span id="anim">GYMIFY</span></h2>
+            <img src="oop.png" alt="">
+        </div>
+        
+        
+    </section>
+    <section id=""></section>
+    <section id=""></section>
+    <section id=""></section>
+
+</body>
+</html>

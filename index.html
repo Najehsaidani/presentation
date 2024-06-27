@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Stage Iniatation</title>
+    
+</head>
+<body>
+    <header>
+        <span>Stage Iniatation</span>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="gymify/index.html">Gymify</a></li>
+                <li><a href="activité/index.html">Activités </a></li>
+                <li><a href="infraction/index.html">Infrastructure</a></li>
+                <li><a href="conclusion/index.html">Conclusion</a></li>
+            </ul>
+        </nav>
+        <script>
+            let menu = document.querySelector("#menu-icon");
+            let sidebar = document.querySelector(".sidebar");
+            
+            // Function to toggle sidebar and menu icon
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                sidebar.classList.toggle('active');
+            };
+        
+            // Remove sidebar when clicking a link within it
+            let sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    menu.classList.remove('bx-x');
+                });
+            });
+        </script>
+        
+    </header>
+    <section id="home">
+        <div class="photo">
+            <div class="image">
+                <img src="jhuj-removebg-preview.png" alt="">
+            </div>
+            <div class="h2">
+                <h2 id="A1">Ministère de l’enseignement supérieur et de la recherche scientifique Et des technologies de l’informatique et de la communication Direction Générale des Etudes Technologiques</h2>
+                <h2 id="A2">Institut Supérieur des Etudes Technologique de Bizerte</h2>
+                <h2 id="A3">Département Technologies de L’informatique</h2>
+            </div>
+            <div class="image">
+                <img src="téléchargement (1).jpg" alt="">
+            </div>
+        </div>
+        <div class="intro">
+            <a href="#home">Presentation de stage d’initiation</a>
+        </div>
+        <div id="description">
+            <ul style="list-style-type: circle !important;">
+                <li>
+                    <p>Le déroulement de stage s’est effectué au société Gymify au cours de la période s’étalent du 11/01/2024 au 03/02/2024.Au cours de ce stage au département informatique, j’ai pu m’intéresser au développement web.  </p>
+                </li>
+                <li>
+                    <p>Tout d’abord, ce stage a été l’opportunité pour moi d’appréhender le secteur de développement web et connaître le processus du travail d'une société, à s’intégrer dans la vie professionnelle et surtout à améliorer mes connaissances théoriques.  </p>
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+
+</body>
+</html>
+<!--<a href="#home">
+                <span style="--i:1">P</span>
+                <span style="--i:2">r</span>
+                <span style="--i:3">e</span>
+                <span style="--i:4">s</span>
+                <span style="--i:5">e</span>
+                <span style="--i:6">n</span>
+                <span style="--i:7">t</span>
+                <span style="--i:8">a</span>
+                <span style="--i:9">t</span>
+                <span style="--i:10">i</span>
+                <span style="--i:11">o</span>
+                <span style="--i:12">n</span>
+                <span style="--i:13"></span>
+                <span style="--i:14">d</span>
+                <span style="--i:15">e</span>
+                <span style="--i:16"></span>
+                <span style="--i:17">s</span>
+                <span style="--i:18">t</span>
+                <span style="--i:19">a</span>
+                <span style="--i:20">g</span>
+                <span style="--i:21">e</span>
+                <span style="--i:22"></span>
+                <span style="--i:23">d</span>
+                <span style="--i:24">’</span>
+                <span style="--i:25">i</span>
+                <span style="--i:26">n</span>
+                <span style="--i:27">t</span>
+                <span style="--i:28">i</span>
+                <span style="--i:29">a</span>
+                <span style="--i:30">t</span>
+                <span style="--i:31">i</span>
+                <span style="--i:32">o</span>
+                <span style="--i:33">n</span></a>-->

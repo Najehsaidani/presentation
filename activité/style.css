@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--text-color);
+list-style-type: none;}
+:root{
+    --text-color:#3dea6c;
+    --body-color:#fafafa;
+    --text1-color:#838592;
+    --header-color:rgb(255, 255, 255);
+    --text-anim:#2bb7da;
+    --animation: gard 20s linear infinite;
+    --anim:linear-gradient(to right, var(--text-anim) , var(--text-color) );
+
+
+}
+body{
+    background-color: var(--body-color);
+    color:var(--text1-color);
+    font-weight: 300;
+}
+
+/*
+width
+::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  Track 
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+       Handle
+  ::-webkit-scrollbar-thumb {
+    background: var(--text1-color); 
+  }
+  
+        Handle on hover
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text1-color); 
+  }
+  */
+/*---------------------animation entete------------------------------------*/
+@keyframes gard {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+  }
+/*--------------------------------------------------------------------------------------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:var(--header-color);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+header .bx-menu{
+    font-size: 2.5rem;
+    color: #2d314d;
+    display: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Poppins',sans-serif;
+    gap: 20px;
+     
+}
+header span{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px;
+    background: var(--anim);
+    -webkit-background-clip: text;
+    background-size:50px;
+    -webkit-text-fill-color: transparent;
+    animation: var(--animation);
+}
+header a{
+    color: #9698a6;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+header a:hover{
+    border-bottom: 2px solid  var(--text-color);
+    color:#2d314d;
+    /*box-shadow: 0 0 1rem #2bb7da;*/
+
+}
+#activite{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#activite h1{
+    font-size: 3rem;
+    font-weight: 700;
+    
+}
+#activite .act{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+#activite .act h3{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--text-anim);
+    margin-bottom: 1rem;
+}
+#activite .act #img1{
+   width: 80%;
+   margin-bottom: 4rem;
+
+}
+#activite .act #img2{
+    width: 60%;
+    margin-bottom: 4rem;
+ 
+ }
+ #activite .act #img3{
+    width: 80%;
+    margin-bottom: 4rem;
+ 
+ }
+ #activite .act #img4{
+    width: 50%;
+    margin-bottom: 4rem;
+ 
+ }
+
+#activite .act .p,#activite .act p{
+    color: rgb(7, 5, 5);
+    text-align: center;
+    margin: 0 5rem;
+}
+
+#activite .act a{
+    margin-top: 28px;
+    margin-left: 20px;
+
+}
+#activite .act a{
+   text-decoration: none;
+   font-size: 18px;
+   padding: 0.6em 2em;
+   letter-spacing: 0.1em;
+   position: relative;
+   font-family: inherit;
+   border-radius: 7px;
+   overflow: hidden;
+   transition: all 0.3s;
+   border: 2px solid #0dd1db;
+   color: #0dd1db;
+}
+#activite .act a:hover{
+   box-shadow:inset 0px 0px 10px 4px #67ebff;
+}
+@media screen and (max-width:801px) {
+    header .bx-menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        display: none;
+        background-color: var(--header-color);
+    }
+    nav.active{
+        display: block;
+    }
+    nav ul{
+        display: block;
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1.25rem;
+    }
+    header{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #activite .act h3 {
+        font-size: 1.5rem;
+    }
+    #activite h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:600px) {
+    #activite .act .p, #activite .act p {
+        color: rgb(7, 5, 5);
+        text-align: center;
+        margin: 0 0rem;
+        font-size: 0.75rem;
+    }
+    #activite .act h3 {
+        font-size: 1rem;
+    }
+    #activite h1 {
+        font-size: 1.5rem;}
+    #activite .act #img1,#activite .act #img2,#activite .act #img3,#activite .act #img4{
+        width: 90%;
+        margin-bottom: 0rem;
+    }
+    
+    #activite .act a{
+        margin-top: 28px;
+        margin-left: 20px;
+    
+    }
+    #activite .act a{
+       font-size: 15px;
+       padding: 0.3em 1em;
+       letter-spacing: 0.1em;
+    }
+
+}
+@media screen and (max-width:500px) {
+    nav ul{
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:400px) {
+    header span{
+        font-size: 1.5rem;
+    }
+    header .bx-menu{
+        font-size: 2rem;
+    }
+    #activite .act #img1,#activite .act #img2,#activite .act #img3,#activite .act #img4{
+        width: 100%;
+        margin-bottom: 0rem;
+    }
+    
+    #activite .act{
+        gap: 1rem;
+    }
+     
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Stage Iniatation</title>
+    
+</head>
+<body>
+    <header>
+        <span>Stage Iniatation</span>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gymify/index.html">Gymify</a></li>
+                <li><a href="../activité/index.html">Activités </a></li>
+                <li><a href="../infraction/index.html">Infrastructure</a></li>
+                <li><a href="../conclusion/index.html">Conclusion</a></li>
+            </ul>
+        </nav>
+        <script>
+            let menu = document.querySelector("#menu-icon");
+            let sidebar = document.querySelector(".sidebar");
+            
+            // Function to toggle sidebar and menu icon
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                sidebar.classList.toggle('active');
+            };
+        
+            // Remove sidebar when clicking a link within it
+            let sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    menu.classList.remove('bx-x');
+                });
+            });
+        </script>
+        
+    </header>
+    <section id="home">
+        <h1>remerciment</h1>
+        <ul>
+            <li>Monsieur Marzouk Ahmed, je tenais à vous remercier pour votre encadrement tout au long de mon stage au sein de votre entreprise. Vos conseils et vos orientations m'ont été très précieux et m'ont permis de mieux comprendre les différentes tâches et les responsabilités liées au poste de technicien supérieur en informatique. Grâce à vos connaissances et votre expérience, j'ai pu enrichir mes compétences professionnelles et acquérir une vision plus claire sur les défis à relever dans ce domaine.</li>
+            <li>Je tiens également à exprimer ma gratitude envers mes enseignants de l'Institut Supérieur des Études Technologiques de Bizerte, qui m'ont préparé pour ce stage et m'ont soutenu tout au long de mon parcours académique. Leurs efforts m'ont permis de réaliser des progrès significatifs et d'appliquer les connaissances acquises au sein de l'entreprise. </li>
+            <li>Enfin, je voudrais remercier l'Institut Supérieur des Études Technologiques de Bizerte pour m'avoir offert cette opportunité de stage. Ce stage m'a permis de découvrir le monde professionnel et de mettre en pratique mes compétences dans un environnement de travail réel. </li>
+        </ul>
+        <h1>Conclusion Générale</h1>
+        <ul>
+            <li>En résumé, mon stage au sein de l'entreprise Gymify a constitué une expérience professionnelle enrichissante et instructive dans le domaine du développement des systèmes informatiques.</li>
+            <li>Travailler au sein de l'équipe Gymify m'a donné une opportunité particulièrement enrichissante d'améliorer mes compétences en programmation et en gestion de projet ainsi que de réseauter dans un environnement professionnel.</li>
+            <li>J'exprime ma gratitude envers toute l'équipe de Gymify pour leur accueil chaleureux, leur soutien continu, et le partage précieux d'expérience tout au long de cette période de stage.</li>
+        </ul>
+    </section>
+
+</body>
+</html>
+<!--<a href="#home">
+                <span style="--i:1">P</span>
+                <span style="--i:2">r</span>
+                <span style="--i:3">e</span>
+                <span style="--i:4">s</span>
+                <span style="--i:5">e</span>
+                <span style="--i:6">n</span>
+                <span style="--i:7">t</span>
+                <span style="--i:8">a</span>
+                <span style="--i:9">t</span>
+                <span style="--i:10">i</span>
+                <span style="--i:11">o</span>
+                <span style="--i:12">n</span>
+                <span style="--i:13"></span>
+                <span style="--i:14">d</span>
+                <span style="--i:15">e</span>
+                <span style="--i:16"></span>
+                <span style="--i:17">s</span>
+                <span style="--i:18">t</span>
+                <span style="--i:19">a</span>
+                <span style="--i:20">g</span>
+                <span style="--i:21">e</span>
+                <span style="--i:22"></span>
+                <span style="--i:23">d</span>
+                <span style="--i:24">’</span>
+                <span style="--i:25">i</span>
+                <span style="--i:26">n</span>
+                <span style="--i:27">t</span>
+                <span style="--i:28">i</span>
+                <span style="--i:29">a</span>
+                <span style="--i:30">t</span>
+                <span style="--i:31">i</span>
+                <span style="--i:32">o</span>
+                <span style="--i:33">n</span></a>-->

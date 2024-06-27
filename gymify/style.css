@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--text-color);
+list-style-type: none;}
+:root{
+    --text-color:#3dea6c;
+    --body-color:#fafafa;
+    --text1-color:#838592;
+    --header-color:rgb(255, 255, 255);
+    --text-anim:#2bb7da;
+    --animation: gard 20s linear infinite;
+    --anim:linear-gradient(to right, var(--text-anim) , var(--text-color) );
+    --band:rgb(255, 119, 0);
+
+
+}
+body{
+    background-color: var(--body-color);
+    color:var(--text1-color);
+    font-weight: 300;
+}
+
+/*
+width
+::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  Track 
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+       Handle
+  ::-webkit-scrollbar-thumb {
+    background: var(--text1-color); 
+  }
+  
+        Handle on hover
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text1-color); 
+  }
+  */
+/*---------------------animation entete------------------------------------*/
+@keyframes gard {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+  }
+/*--------------------------------------------------------------------------------------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:var(--header-color);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+header .bx-menu{
+    font-size: 2.5rem;
+    color: #2d314d;
+    display: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Poppins',sans-serif;
+    gap: 20px;
+     
+}
+@keyframes anim {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position:400%;
+    }
+}
+#anim{
+    background:linear-gradient(130deg,black 0%,var(--band) 10% ,black 30% ,var(--band) 50% ,black 70% ,var(--band) 90%, black 100%);
+    background-clip: text;
+    background-size: 400px;
+    -webkit-text-fill-color: transparent;
+    animation: anim 10s linear infinite;
+}
+header span{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px;
+    background: var(--anim);
+    -webkit-background-clip: text;
+    background-size:50px;
+    -webkit-text-fill-color: transparent;
+    animation: var(--animation);
+}
+header a{
+    color: #9698a6;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+header a:hover{
+    border-bottom: 2px solid  var(--text-color);
+    color:#2d314d;
+    /*box-shadow: 0 0 1rem #2bb7da;*/
+
+}
+#Gymify{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+#Gymify #presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+#Gymify #presentation img{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+#Gymify #presentation h1{
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 20px;
+}
+#Gymify #presentation p{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+#Gymify .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+#Gymify .presentation img{
+    width: 70%;
+    margin-bottom: 20px;
+
+}
+#Gymify .presentation h2{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+@media screen and (max-width:801px) {
+    header .bx-menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        display: none;
+        background-color: var(--header-color);
+    }
+    nav.active{
+        display: block;
+    }
+    nav ul{
+        display: block;
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1.25rem;
+    }
+    header{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:730px) {
+    header .bx-menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        display: none;
+        background-color: var(--header-color);
+    }
+    nav.active{
+        display: block;
+    }
+    nav ul{
+        display: block;
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1.25rem;
+    }
+    header{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:500px) {
+    nav ul{
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:400px) {
+    header span{
+        font-size: 1.5rem;
+    }
+    header .bx-menu{
+        font-size: 2rem;
+    }
+    #Gymify .presentation h2{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    #Gymify #presentation h1 {
+        font-size: 1.5rem;
+    }
+    #Gymify #presentation img {
+            width: 200px;
+            height: 200px;
+    }
+}
+@media screen and (max-width:650px) {
+    #Gymify .presentation h2{
+        font-size: 1.5rem;
+    }
+    #Gymify #presentation h1 {
+        font-size: 3rem;
+    }
+    #Gymify #presentation img {
+            width: 300px;
+            height: 300px;
+    }
+    #Gymify .presentation img{
+        width: 100%;
+    
+    }
+
+}
+@media screen and (max-width:450px) {
+    #Gymify .presentation h2{
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    #Gymify #presentation h1 {
+        font-size: 2rem;
+    }
+    #Gymify #presentation img {
+            width: 250px;
+            height: 250px;
+    }
+    #Gymify .presentation img{
+        width: 100%;
+    
+    }
+
+}

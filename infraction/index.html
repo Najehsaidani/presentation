@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Stage Iniatation</title>
+    
+</head>
+<body>
+    <header>
+        <span>Stage Iniatation</span>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gymify/index.html">Gymify</a></li>
+                <li><a href="../activité/index.html">Activités </a></li>
+                <li><a href="../infraction/index.html">Infrastructure</a></li>
+                <li><a href="../conclusion/index.html">Conclusion</a></li>
+            </ul>
+        </nav>
+        <script>
+            let menu = document.querySelector("#menu-icon");
+            let sidebar = document.querySelector(".sidebar");
+            
+            // Function to toggle sidebar and menu icon
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                sidebar.classList.toggle('active');
+            };
+        
+            // Remove sidebar when clicking a link within it
+            let sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    menu.classList.remove('bx-x');
+                });
+            });
+        </script>
+        
+    </header>
+    <section id="infraction">
+        <h1>Inforaction imformatique</h1>
+        <p>L'infrastructure informatique englobe l'ensemble des matériels, logiciels, et services nécessaires au bon fonctionnement d'un système informatique. </p>
+        <h3>1-Matériels Informatique</h3>
+        <div class="matriel">
+            <img src="image/imac-27-pouces-retina-5k-intel-i7-10-eme-8-go-512-go-mxwv2fna-removebg-preview.png" alt="">
+            <p>Mac 27 pouces 5K Core i7 (3.8 GHz) 8 Go SSD 512 Go AMD Radeon Pro 5500 XT 8GB Absolument tout ce que vous pouvez imaginer est réalisable avec l'iMac.</p>
+        </div>
+        <div class="matriel">
+            <img src="image/imprimante-multifonction-4-en-1-kyocera-taskalfa-mz4000i-avec-chargeur-dp-7150-140-feuilles-rv-toner-tk-7235k-removebg-preview.png" alt="">
+            <p>Imprimante Multifonction 4 en 1 kyocera TASKALFA MZ3200i - Vitesse d’impression jusqu’à 40/21 ppm A4/A3 par minute - Temps d'impression de la première page 4.2sec - Résolution de l’impression : 1200 x 1200 dpi Résolution du scan et de la copie : 600 x 600 dpi - Ecran tactile 10.1" - Avec chargeur DP-7150 ( 140 feuilles) RV + toner TK-7235K + SOCLE METAL AVEC ROUE .</p>
+        </div>
+        <div class="matriel">
+            <img src="image/imprimante-a-reservoir-integre-multifonction-jet-d-encre-couleur-canon-pixma-g2420-5-bouteilles-d-encre-canon.jpg" alt="">
+            <p>Imprimante Multifonction Jet d'encre Couleur Canon Pixma G2420 - Format A4 - Vitesse d'impression Mono/couleur : Environ. 16.4 ppm / 12.8 ppm - Fonctions: Impression, Copie et Scan - Résolution jusqu'à 4800 x 1200 dpi - Bac papier 100 feuilles - Interface USB </p>
+        </div>
+        <div class="matriel">
+            <img src="image/serveur-hp-proliant-dl380-gen9-rack-2u-e5-2620v3-3x-300go-removebg-preview.png" alt="">
+            <p>Serveur HPE ProLiant DL380 Gen9 - Format: Rack 2U - Processeur:Intel Xeon E5-2620 v4  (2.1 GHz up to 3.00 GHz  20Mo , Octa-Core, 85W)</p>
+        </div>
+        <div class="matriel">
+            <img src="image/vid_o-projecteur-epson-eb-w49-hd-ready-wxga---blanc-_v11h983040_-4-removebg-preview.png" alt="">
+            <p>Vidéo Projecteur EPSON EB-W49 HD-Ready - Technologie: </p>
+        </div>
+
+        <div id="log">
+            <h3>2-Logiciel Informatique</h3>
+            <div class="logiciel">
+                <img id="one" src="image/Visual_Studio_Code_1.35_icon.svg.png" alt="">
+                <p>Visual Studio Code est un éditeur de code extensible développé par Microsoft pour Windows, Linux et MacOs.  Les fonctionnalités incluent la prise en charge du débogage, la mise en évidence de la syntaxe</p>
+            </div>
+            <div class="logiciel">
+                <img src="image/VisualStudio2022-1000x600-removebg-preview.png" alt="">
+                <p>Visual Studio est un ensemble complet d'outils de développement permettant de générer des applications web ASP.NET , des services web XML, des applications bureautiques et des applications mobiles.</p>
+            </div>
+            <div class="logiciel">
+                <img src="image/PhpMyAdmin_logo.png" alt="">
+                <p>PhpMyAdmin est une application Web de gestion pour les systèmes de gestion de base de données MySQL et MariaDB, réalisée principalement en PHP et distribuée sous licence GNU GPL.</p>
+            </div>
+            <div class="logiciel">
+                <img src="image/Figma.png" alt="">
+                <p>Figma est un éditeur de graphiques vectoriels et un outil de prototypage. Il est principalement basé sur le web, avec des fonctionnalités hors ligne supplémentaires activées par des applications de bureau pour MacOs et Windows.</p>
+            </div>
+            <div class="logiciel">
+                <img src="image/Adobe_Illustrator_CC_icon.svg.png" alt="">
+                <p>Adobe Illustrator est un logiciel de création graphique vectorielle. Il fait partie de la gamme Adobe, </p>
+            </div>
+            <div class="logiciel">
+                <img src="image/Adobe_Photoshop_CC_icon.svg.png" alt="">
+                <p>Photoshop est un logiciel de retouche, de traitement et de dessin assisté par ordinateur, lancé en 1990 puis en 1992 pour les systèmes d’exploitation MacOS et Windows.</p>
+            </div>
+        </div>
+        <h3>3-L’intelligence artificielle</h3>
+        <div class="ai">
+            <img src="image/gpt.jpg" alt="">
+            <p>ChatGPT, pour Chat Générative Pre-traine Transformer, est un prototype d'agent conversationnel utilisant l'intelligence artificielle, développé par OpenAI et spécialisé dans le dialogue. Il est basé sur les grands modèles de langage d'OpenAI GPT-3.5 et GPT-4.</p>
+        </div>
+        <div class="ai">
+            <img id="sec" src="image/Blackbox-AI1.png" alt="">
+            <p>BLACKBOX AI est un assistant de codage IA qui aide les développeurs en fournissant des suggestions de code en temps réel. Le moyen le plus rapide de copier du code à partir de vidéos et d'images et de rechercher des extraits de code depuis Jupyter ou Paperspace.</p>
+        </div>
+        <div class="ai">
+            <img src="image/git.png" alt="">
+            <p>GitHub Copilot est une extension d'environnement de développement intégré basé sur l'intelligence artificielle et développé par GitHub et OpenAI pour aider les développeurs en complétant automatiquement le code</p>
+        </div>
+        <div class="ai">
+            <img src="image/copilot.jpg" alt="">
+            <p>Microsoft Copilot est un chatbot développé par Microsoft. Basé sur un modèle de langage étendu, il a été lancé sous le nom de Bing Chat le 7 février 2023, en tant que fonctionnalité intégrée pour Microsoft Bing et Microsoft Edge, et constitue le principal remplacement par Microsoft de Cortana, abandonnée.</p>
+        </div>
+    </section>
+
+</body>
+</html>

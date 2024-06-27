@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--text-color);
+list-style-type: none;}
+:root{
+    --text-color:#3dea6c;
+    --body-color:#fafafa;
+    --text1-color:#838592;
+    --header-color:rgb(255, 255, 255);
+    --text-anim:#2bb7da;
+    --animation: gard 20s linear infinite;
+    --anim:linear-gradient(to right, var(--text-anim) , var(--text-color) );
+
+
+}
+body{
+    background-color: var(--body-color);
+    color:var(--text1-color);
+    font-weight: 300;
+}
+
+/*
+width
+::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  Track 
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+       Handle
+  ::-webkit-scrollbar-thumb {
+    background: var(--text1-color); 
+  }
+  
+        Handle on hover
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text1-color); 
+  }
+  */
+/*---------------------animation entete------------------------------------*/
+@keyframes gard {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+  }
+/*--------------------------------------------------------------------------------------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:var(--header-color);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+header .bx-menu{
+    font-size: 2.5rem;
+    color: #2d314d;
+    display: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Poppins',sans-serif;
+    gap: 20px;
+     
+}
+header span{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px;
+    background: var(--anim);
+    -webkit-background-clip: text;
+    background-size:50px;
+    -webkit-text-fill-color: transparent;
+    animation: var(--animation);
+}
+header a{
+    color: #9698a6;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+header a:hover{
+    border-bottom: 2px solid  var(--text-color);
+    color:#2d314d;
+    /*box-shadow: 0 0 1rem #2bb7da;*/
+
+}
+#infraction{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6rem;
+}
+#infraction h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-anim);
+    text-align: center;
+
+}
+#infraction h3{
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#infraction p{
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+#infraction .matriel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+#infraction .matriel img{
+    width: 400px;
+}
+#log{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+#infraction .logiciel{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#one{
+    width: 10% !important;
+}
+#infraction .logiciel img{
+    width:15%;
+    align-self: center;
+}
+#infraction .ai{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom:1rem ;
+}
+#sec{
+    width: 21% !important;
+}
+
+#infraction .ai img{
+    width:20%;
+    align-self: center;
+}
+
+@media screen and (max-width:930px) {
+    #infraction .matriel img{
+        width: 300px;
+    }
+}
+@media screen and (max-width:801px) {
+    header .bx-menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        display: none;
+        background-color: var(--header-color);
+    }
+    nav.active{
+        display: block;
+    }
+    nav ul{
+        display: block;
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1.25rem;
+    }
+    header{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:800px) {
+    #infraction h1{
+        font-size: 3rem;
+    }
+    #infraction h3{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:730px) {
+    header .bx-menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        display: none;
+        background-color: var(--header-color);
+    }
+    nav.active{
+        display: block;
+    }
+    nav ul{
+        display: block;
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1.25rem;
+    }
+    header{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:700px) {
+    #infraction .matriel img{
+        width: 200px;
+    }
+    #infraction p{
+        font-size: 0.75rem;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    #infraction h1{
+        font-size: 2rem;
+    }
+    #infraction h3{
+        font-size: 1.25rem;
+    }
+    #infraction p{
+        font-size: 0.8rem;
+    }
+    #infraction .matriel p{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:500px) {
+    nav ul{
+        font-size: 2.25rem;
+    }
+    nav a{
+        font-size: 1rem;
+    }
+    #infraction .matriel img{
+        width: 100px;
+    }
+    #infraction p{
+        font-size: 0.5rem;
+    }
+    #one{
+        width: 18% !important;
+    }
+    #sec{
+        width: 41% !important;
+    }
+    #infraction .logiciel img{
+        width:30%;
+    }
+    #infraction .ai img{
+        width:40%;
+    }
+}
+@media screen and (max-width:450px) {
+    #infraction h1{
+        font-size: 1.5rem;
+    
+    }
+}
+@media screen and (max-width:400px) {
+    header span{
+        font-size: 1.5rem;
+    }
+    header .bx-menu{
+        font-size: 2rem;
+    }
+}
